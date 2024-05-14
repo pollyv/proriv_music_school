@@ -1,5 +1,6 @@
-$bg: #ff0;
+@import "font";
+@import "variables";
 
-body {
-  background-color: $bg;
+h1 {
+  font-family: $main-font;
 }
