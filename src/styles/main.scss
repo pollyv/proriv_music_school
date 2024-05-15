@@ -1,6 +1,5 @@
 @import "font";
 @import "variables";
-
-h1 {
-  font-family: $main-font;
-}
+@import "header";
+@import "banner";
+@import "layout";

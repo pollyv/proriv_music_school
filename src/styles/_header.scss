@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 71px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  &::before {
+    content: "";
+    display: block;
+    background-color: $accent-color;
+    width: 90%;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: -1;
+  }
+
+  &__logo {
+    background-color: $accent-color;
+    border-radius: 10px 0 0 0;
+    padding: 17px 45px 0 45px;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 71px;
+      background-image: url(../images/header-left.svg);
+      position: absolute;
+      right: -68px;
+      top: 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 26px;
+      background-image: url(../images/header-bottom-left.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+    }
+  }
+  &__link {
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 26px;
+      background-image: url(../images/header-bottom-right.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: -24px;
+      right: 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 71px;
+      background-image: url(../images/header-right.svg);
+      position: absolute;
+      left: -68px;
+      top: 0;
+    }
+    position: relative;
+    color: $light-color;
+    font-size: 20px;
+    padding: 17px 45px 0 45px;
+    background-color: $accent-color;
+    border-radius: 0 10px 0 0;
+  }
+}

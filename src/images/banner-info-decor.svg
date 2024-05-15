@@ -1,0 +1,20 @@
+<svg width="80" height="151" viewBox="0 0 80 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2276_155)">
+<mask id="mask0_2276_155" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="151">
+<path d="M80 0H0V151H80V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2276_155)">
+<mask id="mask1_2276_155" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-569" y="0" width="649" height="151">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.20386 0C9.85571 0 13 5.34812 13 10V45C13 56.0457 21.9543 65 33 65H70C75.5228 65 80 69.4772 80 75V131C80 142.046 71.0457 151 60 151H-549C-560.046 151 -569 142.046 -569 131V20C-569 8.95431 -560.046 0 -549 0H5.20386Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_2276_155)">
+<path d="M14 45V10H12V45H14ZM33 64C22.5066 64 14 55.4934 14 45H12C12 56.598 21.402 66 33 66V64ZM70 64H33V66H70V64ZM79 75V131H81V75H79ZM79 131C79 141.493 70.4934 150 60 150V152C71.598 152 81 142.598 81 131H79ZM60 150H-549V152H60V150ZM-549 150C-559.493 150 -568 141.493 -568 131H-570C-570 142.598 -560.598 152 -549 152V150ZM-568 131V20H-570V131H-568ZM-568 20C-568 9.50659 -559.493 1 -549 1V-1C-560.598 -1 -570 8.40202 -570 20H-568ZM-549 1H5.20386V-1H-549V1ZM70 66C74.9706 66 79 70.0294 79 75H81C81 68.9249 76.0751 64 70 64V66ZM14 10C14 7.46844 13.1504 4.76506 11.6607 2.6751C10.1688 0.582205 7.94867 -1 5.20386 -1V1C7.1109 1 8.78882 2.09186 10.0321 3.83599C11.2774 5.58306 12 7.87969 12 10H14Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2276_155">
+<rect width="80" height="151" fill="white"/>
+</clipPath>
+</defs>
+</svg>
