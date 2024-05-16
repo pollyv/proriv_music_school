@@ -1,0 +1,39 @@
+.tag {
+  display: flex;
+  gap: 64px;
+  animation: move-left 20s infinite linear alternate;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  &:hover {
+    animation-play-state: paused;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 110%;
+    padding: 10px 20px;
+    border: 1px solid $accent-color;
+    border-radius: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: $accent-color;
+      border-radius: 100%;
+      position: absolute;
+      left: -40px;
+      top: calc(50% - 8px);
+    }
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
