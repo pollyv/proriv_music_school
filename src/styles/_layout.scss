@@ -1,6 +1,7 @@
 body {
   font-family: $main-font;
   font-weight: 400;
+  line-height: 110%;
   margin: 0;
   padding: 0;
   background-color: #1f2023;
@@ -10,7 +11,6 @@ body {
 .title-h2 {
   font-size: 32px;
   font-weight: 700;
-  line-height: 110%;
   letter-spacing: 1.6px;
   text-transform: uppercase;
 }

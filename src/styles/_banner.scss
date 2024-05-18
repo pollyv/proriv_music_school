@@ -24,7 +24,6 @@
       color: $light-color;
       font-weight: 600;
       font-size: 20px;
-      line-height: 110%;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       border: 1px solid $accent-color;
@@ -137,14 +136,12 @@
 
   &__text {
     font-size: 24px;
-    font-weight: 200px;
-    line-height: 110%;
+    font-weight: 200;
     margin: 0;
     span {
       display: block;
       font-size: 32px;
       font-weight: 700;
-      line-height: 110%;
       margin-top: 20px;
     }
   }
@@ -157,7 +154,6 @@
     margin-top: 21px;
     &__title {
       font-size: 24px;
-      line-height: 110%;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-top: 0;
