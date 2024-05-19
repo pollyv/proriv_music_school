@@ -15,3 +15,22 @@ const swiper = new Swiper(".slider-teacher", {
   },
   modules: [Navigation, Pagination],
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const acc = document.querySelectorAll(".accordeon__btn");
+
+  acc.forEach((button) => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        panel.classList.remove("active");
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.classList.add("active");
+      }
+    });
+  });
+});

@@ -1,0 +1,72 @@
+.accordeon {
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/ui/minus.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &.active::after {
+      background-image: url(../images/ui/plus.svg);
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    padding-left: 15px;
+
+    &.active {
+      padding: 15px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 25px;
+    color: $dark-color;
+
+    &::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #333;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
