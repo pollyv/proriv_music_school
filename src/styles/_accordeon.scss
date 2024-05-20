@@ -1,25 +1,29 @@
+.course__schedule {
+  margin-top: 45px;
+}
+
 .accordeon {
   &__btn {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #f7f7f7;
+    font-size: 32px;
+    font-weight: 400;
+    color: $accent-color;
+    background-color: $light-color;
     border: none;
+    border-radius: 20px;
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-
-    &:hover {
-      background-color: #e0e0e0;
-    }
 
     &::after {
       content: "";
-      display: inline-block;
-      width: 20px;
-      height: 20px;
+      display: block;
+      width: 50px;
+      height: 50px;
       background-image: url(../images/ui/minus.svg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -34,8 +38,10 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: #f1f1f1;
+    background-color: $light-color;
     padding-left: 15px;
+    border-radius: 20px;
+    cursor: pointer;
 
     &.active {
       padding: 15px;
@@ -44,16 +50,23 @@
 
   &__list {
     list-style: none;
-    padding: 0;
+    padding-left: 15px;
     margin: 0;
   }
 
   &__list-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
     position: relative;
     padding-left: 25px;
     color: $dark-color;
+    font-size: 24px;
+    font-weight: 400;
+    color: $dark-color;
+
+    &:hover {
+      border-bottom: 1px solid #ddd;
+      font-weight: 600;
+    }
 
     &::before {
       content: "—";
@@ -62,11 +75,7 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 20px;
-      color: #333;
-    }
-
-    &:last-child {
-      border-bottom: none;
+      color: $dark-color;
     }
   }
 }
