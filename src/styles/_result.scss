@@ -1,10 +1,6 @@
 .result {
   margin: 150px 0;
 
-  .title-h2 {
-    text-align: center;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -15,44 +11,56 @@
   &__item {
     background-color: $light-color;
     padding: 20px;
-    border-radius: 10px;
-
-    &--subgrid {
-      grid-column: 2 / -1;
+    border-radius: 20px;
+    &._subgrid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-column: 2 / 5;
+      grid-template-columns: subgrid;
+      grid-template-rows: 130px;
       gap: 10px;
       align-items: center;
-
-      p {
-        grid-column: 1 / 2;
-      }
-
-      .result__button {
-        grid-column: 2 / 3;
-        padding: 20px;
-        background-color: $accent-color;
-        color: $light-color;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        text-align: center;
-      }
     }
+  }
 
-    .result__text {
-      color: $dark-color;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 150%;
+    color: $dark-color;
+    margin: 0;
+    span {
+      display: block;
+      width: fit-content;
+      color: $light-color;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 110%;
+      background-color: $accent-color;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
 
-      span {
-        display: block;
-        background-color: $accent-color;
-        color: $light-color;
-        padding: 5px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        text-align: center;
-        width: fit-content;
+  &__button {
+    grid-column: 2 / 4;
+    align-self: stretch;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $light-color;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 20px;
+    padding: 30px;
+    transition: $transition;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        color: $accent-color;
+        background: transparent;
       }
     }
   }

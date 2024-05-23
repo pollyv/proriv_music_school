@@ -1,6 +1,6 @@
 .steps {
   border: 1px solid $light-color;
-  border-radius: 60px;
+  border-radius: 50px;
   background: linear-gradient(
     180deg,
     rgb(31, 32, 35) 0%,
@@ -36,7 +36,7 @@
 
   .steps__item {
     background: $light-color;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
     text-align: left;
     flex: 1 1 calc(25% - 20px);
