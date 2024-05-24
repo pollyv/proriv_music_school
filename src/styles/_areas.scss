@@ -1,0 +1,101 @@
+.areas {
+  margin: 150px 0;
+
+  &__link-wrapper {
+    margin-top: 50px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    color: $light-color;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: transparent;
+    border-bottom: 1px solid $accent-color;
+    border-radius: 0;
+    position: relative;
+    text-decoration: none;
+    transition: $transition;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 1px solid $accent-color;
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      border-radius: 10px;
+      background-color: $accent-color;
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 48px;
+      background-image: url(../images/ui/arrow-rotate.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: $transition;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 770px;
+      opacity: 0;
+      transform: scale(0);
+      transition: $transition;
+    }
+
+    &._acoustic {
+      &::before {
+        width: 568px;
+        height: 314px;
+        background-image: url(../images/areas/acousticguitar.png);
+        top: calc(50% - 157px);
+      }
+    }
+
+    &._drums {
+      &::before {
+        width: 474px;
+        height: 474px;
+        background-image: url(../images/areas/drums.png);
+        top: calc(50% - 237px);
+      }
+    }
+
+    &._violin {
+      &::before {
+        width: 568px;
+        height: 528px;
+        background-image: url(../images/areas/violin.png);
+        top: calc(50% - 264px);
+      }
+    }
+
+    &._basguitar {
+      &::before {
+        width: 586px;
+        height: 394px;
+        background-image: url(../images/areas/electroguitar.png);
+        top: calc(50% - 197px);
+      }
+    }
+  }
+}
