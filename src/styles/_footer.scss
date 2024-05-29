@@ -18,9 +18,13 @@
   &__link {
     color: $accent-color;
     box-shadow: 0 4px -3px $accent-color;
+    border-bottom: 1px solid $accent-color;
     transition: $transition;
-    &:hover {
-      box-shadow: 0 4px -3px transparent;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 4px -3px transparent;
+        border-bottom: 1px solid transparent;
+      }
     }
   }
 
@@ -54,10 +58,12 @@
     background-color: $light-color;
     border-radius: 10px;
     transition: all 0.3s;
-    &:hover {
-      background-color: $accent-color;
-      &::after {
-        background-color: $light-color;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $accent-color;
+        &::after {
+          background-color: $light-color;
+        }
       }
     }
     &::after {

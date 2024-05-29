@@ -4,9 +4,12 @@
   animation: move-left 20s infinite linear alternate;
   margin-top: 150px;
   margin-bottom: 150px;
-  &:hover {
-    animation-play-state: paused;
+  @media (hover: hover) {
+    &:hover {
+      animation-play-state: paused;
+    }
   }
+
   &__text {
     font-size: 24px;
     font-weight: 200;

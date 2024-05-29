@@ -64,9 +64,11 @@
     font-weight: 300;
     color: $dark-color;
 
-    &:hover {
-      border-bottom: 1px solid #ddd;
-      font-weight: 600;
+    @media (hover: hover) {
+      &:hover {
+        border-bottom: 1px solid #ddd;
+        font-weight: 600;
+      }
     }
 
     &::before {

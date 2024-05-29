@@ -18,7 +18,7 @@
     button {
       width: 100%;
       border-radius: 20px;
-      margin-top: 159px;
+      margin-top: 130px;
       padding: 30px;
       background-color: $accent-color;
       border: 0;
@@ -60,21 +60,25 @@
     & + & {
       margin-top: 19px;
     }
-    &:hover {
-      &::before {
-        width: 100%;
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-      }
-      .banner__decore {
-        background-color: $accent-color;
-        border-color: $accent-color;
-        &::after {
+
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          width: 100%;
           opacity: 1;
           transform: translate(0, 0) scale(1);
         }
+        .banner__decore {
+          background-color: $accent-color;
+          border-color: $accent-color;
+          &::after {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+          }
+        }
       }
     }
+
     &::before {
       content: "";
       display: block;

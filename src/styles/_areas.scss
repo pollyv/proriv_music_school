@@ -25,17 +25,19 @@
       margin-bottom: 30px;
     }
 
-    &:hover {
-      border-radius: 10px;
-      background-color: $accent-color;
+    @media (hover: hover) {
+      &:hover {
+        border-radius: 10px;
+        background-color: $accent-color;
 
-      &::after {
-        transform: rotate(45deg);
-      }
+        &::after {
+          transform: rotate(45deg);
+        }
 
-      &::before {
-        opacity: 1;
-        transform: scale(1);
+        &::before {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     }
 

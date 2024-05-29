@@ -37,9 +37,11 @@
     justify-content: center;
     transition: $transition;
 
-    &:hover {
-      background-color: $accent-color;
-      border-color: $accent-color;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+      }
     }
 
     &::after {
@@ -70,11 +72,13 @@
     position: relative;
     overflow: hidden;
     transition: $transition;
-    &:hover {
-      border-color: $accent-color;
-      .slider-teacher__name,
-      .slider-teacher__grid {
-        opacity: 1;
+    @media (hover: hover) {
+      &:hover {
+        border-color: $accent-color;
+        .slider-teacher__name,
+        .slider-teacher__grid {
+          opacity: 1;
+        }
       }
     }
   }

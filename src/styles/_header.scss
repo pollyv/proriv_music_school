@@ -48,38 +48,45 @@
     }
   }
 
-  &__link {
-    position: relative;
-    color: $light-color;
-    font-size: 20px;
-    line-height: 125%;
-    padding: 17px 45px 0 45px;
+  &__info {
     background-color: $accent-color;
+    padding: 17px 45px 0 45px;
     border-radius: 0 10px 0 0;
-    &:hover {
-      text-decoration: underline;
-    }
-    &::after {
+    position: relative;
+    &::before {
       content: "";
       display: block;
-      width: 24px;
-      height: 26px;
+      width: 26px;
+      height: 24px;
       background-image: url(../images/header-bottom-right.svg);
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
-      bottom: -24px;
       right: 0;
+      bottom: -24px;
     }
-    &::before {
+    &::after {
       content: "";
       display: block;
       width: 68px;
       height: 71px;
       background-image: url(../images/header-right.svg);
       position: absolute;
-      left: -68px;
       top: 0;
+      left: -68px;
+    }
+  }
+
+  &__link {
+    color: $light-color;
+    font-size: 20px;
+    border-bottom: 1px solid $light-color;
+    padding-bottom: 5px;
+    transition: $transition;
+    @media (hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $accent-color;
+      }
     }
   }
 }
