@@ -3,42 +3,55 @@
   align-items: stretch;
   justify-content: space-between;
   height: 71px;
+  position: sticky;
   width: 100%;
-  position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 990;
+  @media (max-width: $r-tab) {
+    height: 66px;
+  }
+  @media (max-width: ($r_tab - 20px)) {
+    height: 50px;
+    background-color: $accent-color;
+    border-radius: 10px 10px 0 0;
+  }
+  @media (max-width: $r-mobile_600) {
+    height: clamp(40px, 10vw, 50px);
+  }
   &::before {
     content: "";
     display: block;
-    background-color: $accent-color;
-    width: 90%;
+    width: 100%;
     height: 27px;
     position: absolute;
+    background-color: $accent-color;
+    border-radius: 10px 10px 0 0;
     top: 0;
-    left: 5%;
+    left: 0;
     z-index: -1;
+    @media (max-width: $r-tab) {
+      top: -2px;
+    }
+    @media (max-width: ($r_tab - 20px)) {
+      display: none;
+    }
   }
-
   &__logo {
     background-color: $accent-color;
-    border-radius: 10px 0 0 0;
     padding: 17px 45px 0 45px;
+    border-radius: 10px 0 0 0;
     position: relative;
-    &::after {
-      content: "";
-      display: block;
-      width: 68px;
-      height: 71px;
-      background-image: url(../images/header-left.svg);
-      position: absolute;
-      right: -68px;
-      top: 0;
+    @media (max-width: $r-desk) {
+      padding: 17px 20px 0 20px;
+    }
+    @media (max-width: ($r_tab - 20px)) {
+      padding: 14px 15px 15px 15px;
     }
     &::before {
       content: "";
       display: block;
-      width: 24px;
-      height: 26px;
+      width: 26px;
+      height: 24px;
       background-image: url(../images/header-bottom-left.svg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -46,14 +59,60 @@
       bottom: -24px;
       left: 0;
     }
+    &::after {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 71px;
+      background-image: url(../images/header-left.svg);
+      position: absolute;
+      right: -67px;
+      top: 0;
+      @media (max-width: $r-tab) {
+        height: 66px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: -63px;
+      }
+      @media (max-width: ($r_tab - 20px)) {
+        display: none;
+      }
+    }
   }
-
-  &__info {
+  &__menu {
     background-color: $accent-color;
     padding: 17px 45px 0 45px;
     border-radius: 0 10px 0 0;
     position: relative;
+    @media (max-width: $r-desk) {
+      padding: 17px 20px 0 20px;
+    }
+    @media (max-width: $r-tab) {
+      padding: 20px 20px 0 20px;
+    }
+    @media (max-width: ($r_tab - 20px)) {
+      padding: 14px 15px 10px 15px;
+    }
     &::before {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 71px;
+      background-image: url(../images/header-right.svg);
+      position: absolute;
+      left: -67px;
+      top: 0;
+      @media (max-width: $r-tab) {
+        height: 66px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -60px;
+      }
+      @media (max-width: ($r_tab - 20px)) {
+        display: none;
+      }
+    }
+    &::after {
       content: "";
       display: block;
       width: 26px;
@@ -65,28 +124,25 @@
       right: 0;
       bottom: -24px;
     }
-    &::after {
-      content: "";
-      display: block;
-      width: 68px;
-      height: 71px;
-      background-image: url(../images/header-right.svg);
-      position: absolute;
-      top: 0;
-      left: -68px;
-    }
   }
-
   &__link {
     color: $light-color;
-    font-size: 20px;
-    border-bottom: 1px solid $light-color;
+    font-size: 2rem;
     padding-bottom: 5px;
+    border-bottom: 1px solid $light-color;
     transition: $transition;
     @media (hover: hover) {
       &:hover {
-        border-bottom: 1px solid $accent-color;
+        color: $gray-color;
+        border-bottom: 1px solid $gray-color;
       }
+    }
+    @media (max-width: $r-tab) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: $r-mobile_600) {
+      padding-top: 3px;
+      font-size: clamp(1rem, 1.8vw + 0.3rem, 1.6rem);
     }
   }
 }
